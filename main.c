@@ -9,7 +9,7 @@ int main (){
     pos* position = calloc(1, sizeof(pos));
     for(int i = 0; i < image->y; i++){
         position->pointed = image->matrix[i];
-        printf("p/ i = %d temos %d\n",i, *position->pointed);
+        printf("p/ i = %d temos %d\n",i, *(position->pointed));
 
         /*
         for(int j = 0; j < image->x; j++){
