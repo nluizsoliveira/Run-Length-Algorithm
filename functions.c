@@ -17,9 +17,6 @@ pgm* read_and_create_regular_pgm(){
         aux->matrix[i] = calloc(aux->x, sizeof(int));
     }
 
-    printf("%s\n%d %d\n%d\n", aux->type, aux->x, aux->y, aux->range);
-
-
     for(int i = 0; i < aux->y; i++){
         for(int j = 0; j < aux->x; j++){
             scanf("%d ", &(aux->matrix[i][j]));

@@ -19,6 +19,7 @@ A convenção para o tipo de PGM convertido adotada é **P8**.
 
 ### 2- Decompressão: 
 Busca por cadeias em formato **@CN** e as transforma em seu estado original. 
+
 ## Entrada:
 Imput no formato PGM. Caso o tipo de .pgm seja **```P8```**, o algoritmo de decompressão e executado. Caso contrário, o algoritmo de compressão é executado. 
 
