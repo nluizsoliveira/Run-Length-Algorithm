@@ -13,7 +13,7 @@ clean:
 	@find -name '*.o' | xargs rm -rf {}
 
 run:
-	@./trab5 < ./testes/7.in
+	@./trab5 < ./testes/3.in
 
 zip:
 	zip -r trab5.zip *.c *.h Makefile
