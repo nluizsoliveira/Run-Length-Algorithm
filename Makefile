@@ -8,12 +8,11 @@ compile:
 	@gcc -o $(BINARY) $(SOURCES) -I$(INCLUDES)
 
 clean:
-	@clear
 	@find -name '*~' | xargs rm -rf {}
 	@find -name '*.o' | xargs rm -rf {}
 
 run:
-	@./trab5 < ./testes/3.in
+	@./trab5
 
 zip:
 	zip -r trab5.zip *.c *.h Makefile
