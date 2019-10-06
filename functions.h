@@ -15,7 +15,8 @@ typedef struct {
     int counter;
 } pos;
 
-pgm* read_and_create_regular_pgm();
+pgm* read_and_create_regular_pgm(char*);
 void print_regular_pgm(pgm*);
 void print_compressed_pgm_by_regular_pgm(pgm*);
+void print_regular_pgm_by_compressed_pgm();
 #endif

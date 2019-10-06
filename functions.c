@@ -4,10 +4,10 @@
 #include <functions.h>
 
 
-pgm* read_and_create_regular_pgm(){
+pgm* read_and_create_regular_pgm(char* type){
     pgm *aux = calloc(1, sizeof(aux));
 
-    scanf("%s ", aux->type);
+    strcpy(aux->type, type);
     scanf("%d %d ", &aux->x, &aux->y);
     scanf("%d ", &aux->range);
 
@@ -84,4 +84,36 @@ void print_compressed_pgm_by_regular_pgm(pgm* image){
         }
         printf("\n");
     }
+}
+
+void print_regular_pgm_by_compressed_pgm(){
+    printf("P2\n");
+    int x,y,range;
+    scanf("%d %d ", &x, &y);
+    scanf("%d ", &range);
+
+    printf("%d %d\n",x, y);
+    printf("%d\n",range);
+
+    for(int i = 0; i < y; i++){
+        char atOrNumber [10];
+        char number [10];
+        int repeated_times;
+
+        for(int j = 0; j < x; j++){
+            scanf("%s", atOrNumber);
+                if(atOrNumber[0] == '@'){
+                    scanf("%s", number);
+                    scanf("%d", &repeated_times);
+                    for(int k = 0; k < repeated_times; k++){
+                        printf("%s ", number);
+                    }
+                    j = j + repeated_times -1;
+                }
+
+                else printf("%s ", atOrNumber);            
+        }   
+        printf("\n");
+    }
+
 }
